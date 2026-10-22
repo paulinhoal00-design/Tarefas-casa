@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Planner Casa — Paulinho e Camila",
+  "short_name": "Planner Casa",
+  "lang": "pt-BR",
+  "description": "Tarefas e ações para organizar o nosso lar.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8f6",
+  "theme_color": "#247d77",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

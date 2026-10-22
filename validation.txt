@@ -1,0 +1,3 @@
+Verificação de sintaxe JavaScript e testes funcionais com DOM e Firestore simulados: aprovados.
+Casos: preservação de tarefas/comentários antigos, responsáveis Paulinho/Camila, criação/edição/exclusão de ações, progresso 50%/100%, status agregado, filtros, WhatsApp, recuperação de falha ao salvar e histórico.
+Não foi possível executar inspeção visual em navegador nesta sessão: o navegador de testes não pôde ser instalado. A sincronização real depende da hospedagem e permissões existentes do Firebase.

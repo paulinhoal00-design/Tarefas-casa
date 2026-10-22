@@ -1,0 +1,15 @@
+PLANNER CASA — PAULINHO E CAMILA
+
+1. Publique todos os arquivos deste pacote juntos, na mesma pasta do endereço já usado pelo Planner Casa. O arquivo principal é index.html (minúsculo).
+2. Abra por HTTPS para instalar pelo navegador no celular. Arquivos abertos diretamente não permitem instalação PWA.
+3. Use o botão + para criar uma tarefa com responsável e data. Dentro do cartão, use Adicionar ação para definir os passos, responsável e prazo de cada um.
+4. Toque no círculo da ação para selecionar Pendente, Em andamento ou Concluída. A tarefa acompanha automaticamente o conjunto das suas ações. Sem ações, o status da tarefa pode ser alterado diretamente.
+5. O botão de compartilhar abre a prévia do relatório. Escolha Paulinho/Camila e os status; o botão Enviar pelo WhatsApp abre o WhatsApp para você escolher a conversa e confirmar o envio.
+6. Os registros existentes continuam na coleção planner_casa_tarefas. Novas ações são campos internos das respectivas tarefas. Registros antigos não são apagados nem migrados automaticamente.
+7. Mantido o login existente: seleção entre Paulinho e Camila, com senha local vinculada ao navegador. A sincronização depende da conexão e das permissões existentes no Firebase. Abertura offline do aplicativo não garante sincronização ou acesso a dados ainda não carregados.
+
+ARQUIVOS
+index.html — aplicativo completo com a logo incorporada
+manifest.json e sw.js — instalação, cache e atualização
+icon-192.png e icon-512.png — ícones para celular
+planner-casa-logo.png — logo original, casa com coração e check

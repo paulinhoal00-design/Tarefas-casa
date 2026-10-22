@@ -1,0 +1,10 @@
+const CACHE_NAME='planner-casa-paulinho-camila-v20261022-2';
+const SHELL=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(SHELL))));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('planner-casa-paulinho-camila-')&&k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('message',e=>{if(e.data?.type==='skipWaiting')self.skipWaiting()});
+self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==self.location.origin)return;
+if(!/\.(?:html|css|js|png|json)$/.test(u.pathname)&&!u.pathname.endsWith('/'))return;
+const fresh=fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();return caches.open(CACHE_NAME).then(c=>c.put(e.request,copy)).then(()=>r)}return r});
+e.waitUntil(fresh.then(()=>{},()=>{}));
+e.respondWith(caches.match(e.request).then(cached=>cached||fresh).catch(()=>e.request.mode==='navigate'?caches.match('./index.html'):Response.error()))});
